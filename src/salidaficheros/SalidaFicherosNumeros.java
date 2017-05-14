@@ -29,9 +29,9 @@ public class SalidaFicherosNumeros {
     }
     
      public void generarBinario() {
-        RandomAccessFile fOut = null;
+        DataOutputStream fOut = null;
         try {
-            fOut =  new RandomAccessFile("numeros.bin", "rw");
+            fOut =  new DataOutputStream(new FileOutputStream("numeros.bin"));
             for (int i: numeros) {
                 fOut.writeInt(i);
             }
